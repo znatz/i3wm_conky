@@ -41,6 +41,6 @@ IIT: ${execi 60 perl ./imap2.pl} | \
 CPU: ${cpu}% | \
 RAM: ${mem} / ${memmax} - ${memperc}% | \
 Bat: ${battery_short BAT1} | \
-${time %a, %B %e %G %T} | \
+${time %G %D %T} | \
 ${execi 60 ./weather.sh 60532} | \
 Vol: ${exec amixer -c 0 get Master | awk '/\[*%\]/ {print $4}'}

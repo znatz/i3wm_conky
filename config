@@ -22,7 +22,9 @@ new_float 1pixel
 #hide_edge_borders horizontal
 
 # font for window titles. ISO 10646 = Unicode
-font -misc-fixed-medium-c-normal--12-120-75-75-C-70-iso10646-1
+# font -misc-fixed-medium-c-normal--12-120-75-75-C-70-iso10646-1
+# font -*-clearlyu-*-*-*-*-12-120-75-75-C-70-iso10646-*
+font -misc-fixed-medium-r-normal--12-120-75-75-C-70-iso10646-1
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -233,3 +235,15 @@ exec --no-startup-id i3-msg 'workspace 1; exec urxvt;'
 #exec xscreensaver -no-splash
 exec --no-startup-id xfce4-volumed
 exec feh --bg-scale /home/xxx/images/wallpapers/bmw_vision.png
+
+# scratchpad                                                           
+bindsym $mod+p move scratchpad
+bindsym $mod+o scratchpad show
+
+# volume control                                                       
+bindsym XF86AudioRaiseVolume exec amixer set Master 5%+ unmute
+bindsym XF86AudioLowerVolume exec amixer set Master 5%- unmute
+bindsym XF86AudioMute exec amixer set Master toggle
+
+# printscreen
+# bindsym Print exec printscreen_root
