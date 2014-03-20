@@ -36,8 +36,8 @@ cpu_avg_samples 2
 # Stuff after 'TEXT' will be formatted on screen
 TEXT
 
-Gmail: ${execi 60 perl ./imap.pl} \
-IIT: ${execi 60 perl ./imap2.pl} | \
+# Gmail: ${execi 60 perl ./imap.pl} \
+# IIT: ${execi 60 perl ./imap2.pl} | \
 CPU: ${cpu}% | \
 RAM: ${mem} / ${memmax} - ${memperc}% | \
 Bat: ${battery_short BAT1} | \

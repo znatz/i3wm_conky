@@ -177,7 +177,7 @@ bindsym $mod+r mode "resize"
 
 # take screenshot
 # bindsym Print exec scrot '%Y-%m-%d-%t_$wx$h.png' -e 'mv $ $f ~/images/'
-bindsym Print exec scrot 'Screenshot - %Y-%m-%d--%_$wx$h_scrot.png' -e 'mv $f ~/images/'
+# bindsym Print exec scrot 'Screenshot - %Y-%m-%d--%_$wx$h_scrot.png' -e 'mv $f ~/images/'
 
 
 # colors
@@ -247,3 +247,4 @@ bindsym XF86AudioMute exec amixer set Master toggle
 
 # printscreen
 # bindsym Print exec printscreen_root
+bindsym Print exec i3-sensible-terminal -e xfce4-screenshooter
