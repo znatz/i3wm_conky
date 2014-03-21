@@ -243,9 +243,9 @@ bar {
 		# http://www.colourlovers.com/palette/435387/hippie_car?c=1
 		background #141113
 		statusline #f77825
-		focused_workspace #ffb63a #ffb63a #f17a04
-		active_workspace #ffb63a #ffb63a #f17a04
-		inactive_workspace #fefec8 #fefec8 #f17a04
+		focused_workspace #25a4f7 #250000 #f77825 
+		active_workspace #25a4f7 #253bf7 #f77825 
+		inactive_workspace #fefec8 #fefec8 #f77825
 	   }
 }
 
