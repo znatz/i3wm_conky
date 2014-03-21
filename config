@@ -24,7 +24,8 @@ new_float 1pixel
 # font for window titles. ISO 10646 = Unicode
 # font -misc-fixed-medium-c-normal--12-120-75-75-C-70-iso10646-1
 # font -*-clearlyu-*-*-*-*-12-120-75-75-C-70-iso10646-*
-font -misc-fixed-medium-r-normal--12-120-75-75-C-70-iso10646-1
+# font -misc-fixed-medium-r-normal--12-120-75-75-C-70-iso10646-1
+font xft:monospace 9
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -52,36 +53,36 @@ bindsym $mod+u border none
 #i3-msg border none 
 
 # WHICH WORKSPACE #
-#assign [class="Iceweasel"] 2
+# assign [class="Iceweasel"] 2
+# assign [class="sublime-text-2"] 3
+# assign [class="Chromium"] 2
+# assign [class="Iceweasel"] 2
+# assign [class="Iceape"] 2
 
 # WINDOW CONTROL 
 for_window [class="*"] floating enable
-assign [class="sublime-text-2"] 3
-for_window [class="sublime-text-2"] border 1pixel
-for_window [class="Gnome-mplayer"] floating enable
-assign [class="Chromium"] 2
-for_window [class="Chromium"] border 1pixel
-assign [class="Iceweasel"] 2
-for_window [class="Iceweasel"] border 1pixel
-for_window [title="Browser"] floating enable
-for_window [title="Download"] floating enable
-assign [class="Iceape"] 2
-for_window [class="Iceape"] border 1pixel
-for_window [class="Nitrogen"] floating enable
-for_window [class="Lxappearance"] floating enable
-for_window [title="Xfce-notifyd"] floating enable
-for_window [class="Sakura"] floating enable
-for_window [class="Sakara"] border normal
-#for_window [class="URxvt"] floating enable 
-for_window [class="URxvt"] border 1pixel #none 
-for_window [class="Thunar"] floating enable
 for_window [class="Leafpad"] floating enable
 for_window [class="Mousepad"] floating enable
-for_window [class="Gmrun"] floating enable
-for_window [class="Gmrun"] border 1pixel
-for_window [class="Grun"] floating enable
-for_window [class="Grun"] border 1pixel
-for_window [class="Pidgin"] floating enable
+for_window [title="Browser"] floating enable
+for_window [title="Download"] floating enable
+# for_window [class="sublime-text-2"] border 1pixel
+# for_window [class="Gnome-mplayer"] floating enable
+# for_window [class="Chromium"] border 1pixel
+# for_window [class="Iceweasel"] border 1pixel
+# for_window [class="Iceape"] border 1pixel
+# for_window [class="Nitrogen"] floating enable
+# for_window [class="Lxappearance"] floating enable
+# for_window [title="Xfce-notifyd"] floating enable
+# for_window [class="Sakura"] floating enable
+# for_window [class="Sakara"] border normal
+# for_window [class="URxvt"] floating enable 
+# for_window [class="URxvt"] border 1pixel #none 
+# for_window [class="Thunar"] floating enable
+# for_window [class="Gmrun"] floating enable
+# for_window [class="Gmrun"] border 1pixel
+# for_window [class="Grun"] floating enable
+# for_window [class="Grun"] border 1pixel
+# for_window [class="Pidgin"] floating enable
 
 
 # NAME WORKSPACES
@@ -182,11 +183,18 @@ bindsym $mod+r mode "resize"
 
 # colors
 # class                                border   backgr.    text
-client.focused			       #315858  #315858  #111111
 #client.focused			       #bf3f34  #bf3f34  #bf3f34
-client.unfocused		       #2c2e2f  #2c2e2f  #315858
-client.focused_inactive		       #2c2e2f  #2c2e2f  #2c2e2f
-client.urgent			       #383a3b  #383a3b  #ee0000
+# client.focused			       #315858  #315858  #111111
+# client.unfocused		       #2c2e2f  #2c2e2f  #315858
+# client.focused_inactive		       #2c2e2f  #2c2e2f  #2c2e2f
+# client.urgent			       #383a3b  #383a3b  #ee0000
+# client.focused #859900 #859900 #fdf6e3 #2e9ef4
+# client.focused_inactive #268bd2 #268bd2 #fdf6e3 #484e50
+# client.unfocused #333333 #93a1a1 #fdf6e3 #292d2e
+client.focused #ff9545 #ff9545 #fffeab #a32e03
+client.focused_inactive #a32e03 #a32e03 #fffeab #ff9545
+client.unfocused #333333 #93a1a1 #fffeab #292d2e
+
 
 
 ###  ADDED KEY BINDINGS  ###
@@ -217,17 +225,30 @@ bar {
 	mode dock
 
   colors {
-	statusline	#76c2d6
-	background	#191919
-	
-# class                 	                 border 		backgrd 	text
-        focused_workspace      #191919 		#191919 	#bf3f34
-        active_workspace          #191919 		 #191919 	#696f89
-        inactive_workspace     #191919 		#191919 	#696f89
-        urgent_workspace        #191919 		#191919 	#c7a551
-   }
- 
+		# class #                 	                 border 		backgrd 	text
+		# statusline	#76c2d6
+		# background	#191919
+		# focused_workspace      #191919 		#191919 	#bf3f34
+		# active_workspace          #191919 		 #191919 	#696f89
+		# inactive_workspace     #191919 		#191919 	#696f89
+		# urgent_workspace        #191919 		#191919 	#c7a551
+
+		# solarized
+		# background #073642
+		# statusline #eee8d5
+		# focused_workspace #cb4b16 #cb4b16 #eee8d5
+		# active_workspace #cb4b16 #cb4b16 #eee8d5
+		# inactive_workspace #b58900 #b58900 #eee8d5
+
+		# http://www.colourlovers.com/palette/435387/hippie_car?c=1
+		background #141113
+		statusline #f77825
+		focused_workspace #ffb63a #ffb63a #f17a04
+		active_workspace #ffb63a #ffb63a #f17a04
+		inactive_workspace #fefec8 #fefec8 #f17a04
+	   }
 }
+
 # AUTOSTART
 exec --no-startup-id i3-msg 'workspace 1; exec urxvt;'
 exec --no-startup-id nm-applet
