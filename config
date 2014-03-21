@@ -181,12 +181,12 @@ bindsym $mod+r mode "resize"
 
 
 # colors
-# class                                                 border  backgr.    text
+# class                                border   backgr.    text
 client.focused			       #315858  #315858  #111111
-#client.focused			        #bf3f34  #bf3f34   #bf3f34
-client.unfocused		                #2c2e2f  #2c2e2f  #315858
-client.focused_inactive	        #2c2e2f #2c2e2f  #2c2e2f
-client.urgent			              #383a3b #383a3b  #ee0000
+#client.focused			       #bf3f34  #bf3f34  #bf3f34
+client.unfocused		       #2c2e2f  #2c2e2f  #315858
+client.focused_inactive		       #2c2e2f  #2c2e2f  #2c2e2f
+client.urgent			       #383a3b  #383a3b  #ee0000
 
 
 ###  ADDED KEY BINDINGS  ###
@@ -230,6 +230,7 @@ bar {
 }
 # AUTOSTART
 exec --no-startup-id i3-msg 'workspace 1; exec urxvt;'
+exec --no-startup-id nm-applet
 #exec ~/.dropbox-dist/dropboxd
 #exec nitrogen --restore
 #exec xscreensaver -no-splash
