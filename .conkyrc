@@ -11,8 +11,9 @@ override_utf8_locale yes
 TEXT
 
 CPU: ${cpu}% | \
-RAM: ${mem} / ${memmax} - ${memperc}% | \
-Bat: ${battery_short BAT1} | \
+◎ : ${fs_used}+${fs_free}=${fs_size} | \
+■ : ${mem}/${memmax}=${memperc}% | \
+β: ${battery_short BAT1} | \
 ${time %F %T} | \
-${execi 60 ./weather.sh 60532} | \
 Vol: ${exec amixer -c 0 get Master | awk '/\[*%\]/ {print $4}'}
+#${execi 60 ./weather.sh 60532} | \
