@@ -265,9 +265,8 @@ bindsym $mod+o scratchpad show
 # volume control                                                       
 bindsym XF86AudioRaiseVolume exec amixer set Master 5%+ unmute
 bindsym XF86AudioLowerVolume exec amixer set Master 5%- unmute
-bindsym XF86AudioMute exec amixer -q set Master toggle
-bindsym $mod+Shift+U exec $HOME/.i3/scripts/unmuteall
+bindsym XF86AudioMute exec amixer set Master 0% 
+bindsym $mod+Shift+U exec amixer set Master 70%
 
 # printscreen
 # bindsym Print exec printscreen_root
-bindsym Print exec i3-sensible-terminal -e xfce4-screenshooter
